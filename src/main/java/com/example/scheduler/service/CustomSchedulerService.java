@@ -12,7 +12,7 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class CustomerSchedulerService {
+public class CustomSchedulerService {
 
     private final PriorityQueue<ScheduledTask> taskQueue;
 
@@ -22,7 +22,7 @@ public class CustomerSchedulerService {
 
     private final ThreadPoolExecutor workerExecutor;
 
-    public CustomerSchedulerService(int workerThreadSize) {
+    public CustomSchedulerService(int workerThreadSize) {
         this.taskQueue = new PriorityQueue<>(Comparator.comparingLong(ScheduledTask::getScheduledTime));
         this.workerExecutor = (ThreadPoolExecutor) Executors.newFixedThreadPool(workerThreadSize);
     }

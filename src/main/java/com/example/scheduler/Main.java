@@ -1,13 +1,13 @@
 package com.example.scheduler;
 
-import com.example.scheduler.service.CustomerSchedulerService;
+import com.example.scheduler.service.CustomSchedulerService;
 
 import java.util.concurrent.TimeUnit;
 
 public class Main {
 
     public static void main(String[] args) {
-        CustomerSchedulerService schedulerService = new CustomerSchedulerService(10);
+        CustomSchedulerService schedulerService = new CustomSchedulerService(10);
 
         Runnable task1 = getRunnableTask("Task1");
         schedulerService.schedule(task1, 1, TimeUnit.SECONDS);
